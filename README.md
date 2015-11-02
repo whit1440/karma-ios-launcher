@@ -6,6 +6,12 @@ Run karma unit tests inside a UIWebView via a Cordova applications container.
 <pre>
 npm install git+https://git.target.com/stores/karma-ios-launcher.git
 </pre>
+For this to work with Jenkins, you need to use git+ssh configuration with git as the user and a colon between hostname and org, like the following:
+<pre>
+"devDependencies": {
+     "karma-ios-launcher": "git+ssh://git@git.target.com:stores/karma-ios-launcher.git"
+ }
+</pre>
 
 # configuration
 In your project's karma configuration file add `iOS` to the browsers array. To run on a specific device type, specify iosLauncher.deviceType.
