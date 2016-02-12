@@ -1,5 +1,5 @@
 # karma-ios-launcher
-Run karma unit tests inside a UIWebView via a Cordova applications container.
+Run karma unit tests inside a UIWebView via a Cordova application container. It does not run the tests in Mobile Safari.
 <br><b>Note: This likely will not yet work with iOS 9.</b>
 
 # installation
@@ -9,7 +9,7 @@ npm install git+https://git.target.com/stores/karma-ios-launcher.git
 For this to work with Jenkins, you need to use git+ssh configuration with git as the user and a colon between hostname and org, like the following:
 <pre>
 "devDependencies": {
-     "karma-ios-launcher": "git+ssh://git@git.target.com:stores/karma-ios-launcher.git"
+     "karma-ios-launcher": "https://github.org/whit1440/karma-ios-launcher.git"
  }
 </pre>
 
@@ -26,4 +26,4 @@ iosLauncher: {
     deviceType: 'iPhone-5'
 }
 </pre>
-If you want to view available device types for your machine, use `ios-sim showdevicetypes` (assuming you have ios-sim globally installed).
+If you want to view available device types for your machine use `xcrun simctl list` or if you have ios-sim installed `ios-sim showdevicetypes`.
